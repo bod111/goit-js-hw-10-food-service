@@ -15,8 +15,8 @@ refs.themeBtn.addEventListener('change', onThemeSwitch);
 
 function onThemeSwitch(evt) {
   const themeColor = evt.target.checked ? refs.darkTheme : refs.ligthTheme;
-  console.log('onThemeSwitch ~ themeColor', themeColor);
-  console.log('onThemeSwitch ~ evt.target.checked', evt.target.checked);
+  // console.log('onThemeSwitch ~ themeColor', themeColor);
+  // console.log('onThemeSwitch ~ evt.target.checked', evt.target.checked);
 
   setData(themeColor);
   setBodyColor(themeColor);
@@ -28,12 +28,12 @@ function setData(data) {
 // запись/перезапись класса темы body
 function setBodyColor(classColor) {
   refs.bodyColor.className = classColor;
-  console.log('setBodyColor ~ classColor', classColor);
+  // console.log('setBodyColor ~ classColor', classColor);
 }
 
 function changeCheckboxTheme() {
   const firstData = localStorage.getItem('theme') || refs.ligthTheme;
-  console.log('changeCheckboxTheme ~ firstData', firstData);
+  // console.log('changeCheckboxTheme ~ firstData', firstData);
   setBodyColor(firstData);
 
   refs.themeBtn.checked = firstData === refs.darkTheme;
